@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CompareViz - Product Comparison Tool</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CompareViz</h1>
+            <div class="view-controls">
+                <button id="tableView">Table</button>
+                <button id="radarView">Radar</button>
+                <button id="scatterView">Scatter</button>
+                <button id="lineView">Line</button>
+            </div>
+        </header>
+
+        <div class="upload-zone" id="uploadZone">
+            <div class="upload-prompt">
+                <p>Drag & Drop Images Here</p>
+                <p>or</p>
+                <input type="file" id="fileInput" multiple accept="image/*" hidden>
+                <button id="uploadButton">Choose Files</button>
+            </div>
+        </div>
+
+        <div class="product-gallery" id="productGallery">
+            <!-- Products will be added here -->
+        </div>
+
+        <div class="comparison-container">
+            <div id="tableContainer" class="view-container active">
+                <!-- Comparison table will be generated here -->
+            </div>
+            
+            <div id="radarContainer" class="view-container">
+                <canvas id="radarChart"></canvas>
+            </div>
+            
+            <div id="scatterContainer" class="view-container">
+                <canvas id="scatterChart"></canvas>
+            </div>
+            
+            <div id="lineContainer" class="view-container">
+                <canvas id="lineChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
